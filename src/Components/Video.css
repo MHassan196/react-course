@@ -1,0 +1,23 @@
+.container{
+    width: 15em;
+    margin: 0.5em 0 0.5em 0.5em;
+    float: left;
+}
+.pic{
+    width: 100%;
+    border-radius: 10px;
+}
+.title{
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+.channel, .views{
+    font-size: 9px;
+    color: white;
+    margin-bottom: 0.5em;
+}
+.views span{
+    padding: 0 0.5em 0 0;
+}

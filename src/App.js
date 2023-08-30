@@ -1,20 +1,21 @@
 import './App.css';
+import Video from './Components/Video';
 
 function App() {
-  var name = 'hello';
-  var className = 'App-header'
+  let obj = {
+    title: "ReactJS Tutorial", 
+    channel: "CodeWithMe", 
+    views: "100K", 
+    time: "1 Month Ago"
+  }
   return (
-    <div className="App">
-      <div className={className}>
-        {name}
-      <Demo></Demo>
-      </div>
+    <div className='App'>
+      <div className='video'> Videos </div>
+      <Video {...obj}></Video>
+      <Video title="NodeJS Tutorial" views="10K" time="1 Year Ago"></Video>
+      <Video title="MongoDB Tutorial" channel="CodeWithMe" views="1M" time="1 Month Ago"></Video>
     </div>
   );
-}
-
-function Demo(){
-  return <div>Demo</div>
 }
 
 export default App;
