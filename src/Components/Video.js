@@ -1,7 +1,7 @@
 import React from 'react'
 import './Video.css'
 
-function Video({title,id, channel="CodeWithMe", views, time, verified}) {
+function Video({title,id, channel="CodeWithMe", views, time, verified, children}) {
   return (
     <>
     <div className='container'>
@@ -13,6 +13,9 @@ function Video({title,id, channel="CodeWithMe", views, time, verified}) {
       <div className="title" >{title}</div>
       <div className="channel" >{channel} {verified? '✅' : null}</div>
       <div className="views" >{views} views <span>.</span> {time}</div>
+      <div>
+        {children}
+      </div>
       </div>
     </>
   )
