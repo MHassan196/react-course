@@ -2,14 +2,17 @@ import './App.css';
 import PlayButton from './Components/PlayButton';
 import Video from './Components/Video';
 import videos from './data/data';
+import Event from './Components/Event';
 
 function App() {
+  const levels = [];
   
   return (
-    <div className='App' onClick={()=>console.log('App')}>
+    <div className='App' onClick={()=>{levels.push('App'); console.log(levels.reverse().join('>'))}}>
       <div className='video'> Videos </div>
       {
       videos.map(video=><Video 
+        levels={levels}
         key={video.id}
         id={video.id}
         title={video.title} 
@@ -26,6 +29,8 @@ function App() {
 
       </Video>)
       }
+
+      <Event></Event>
       
       <div style={{clear:"both"}}>
         {/* <PlayButton message='play-msg' onPlay={()=>console.log('play')} onPause={()=>console.log('pause')}>Play</PlayButton> */}

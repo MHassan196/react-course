@@ -1,12 +1,12 @@
 import React from 'react'
 import './Video.css'
 
-function Video({title,id, channel="CodeWithMe", views, time, verified, children}) {
+function Video({title,id, channel="CodeWithMe", views, time, verified, children, levels}) {
   return (
     <>
-    <div className='container'>
+    <div className='container' onClick={()=>levels.push('Video')}>
       <div className="pic">
-      <img src={`https://picsum.photos/id/${id}/160/90`} alt="" />
+      <img onClick={()=>levels.push('Image')} src={`https://picsum.photos/id/${id}/160/90`} alt="" />
       </div>
 
       {/* <div className={bg} style={{backgroundColor: bgColor}}>{title}</div> */}
