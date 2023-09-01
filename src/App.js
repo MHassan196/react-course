@@ -1,13 +1,31 @@
 import './App.css';
 import PlayButton from './Components/PlayButton';
 import Video from './Components/Video';
-import videos from './data/data';
+import videosDB from './data/data';
+import Counter from './Components/Counter';
+import { useState } from 'react';
 
 function App() {
+
+  const [videos, setVideos] = useState(videosDB)
   
   return (
     <div className='App' onClick={()=>console.log('App')}>
       <div className='video'> Videos </div>
+      <div>
+        <button onClick={()=>{
+          setVideos(
+            [...videos,
+              {id:videos.length+1,
+              title: "ExpressJS Tutorial", 
+              channel: "CodeWithMe", 
+              views: "10M", 
+              time: "6 Month Ago",
+              verified: true
+        }]
+          )
+        }}>Add Video</button>
+      </div>
       {
       videos.map(video=><Video 
         key={video.id}
@@ -31,6 +49,8 @@ function App() {
         {/* <PlayButton message='play-msg' onPlay={()=>console.log('play')} onPause={()=>console.log('pause')}>Play</PlayButton> */}
         {/* <PlayButton message='pause-msg' onClick={()=>alert('pauseee')}>Pause</PlayButton> */}
       </div>
+
+      <Counter></Counter>
 
       
     </div>
