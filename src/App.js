@@ -4,6 +4,7 @@ import Video from './Components/Video';
 import videosDB from './data/data';
 import Counter from './Components/Counter';
 import { useState } from 'react';
+import Clock from './Components/Clock';
 
 function App() {
 
@@ -11,7 +12,9 @@ function App() {
   
   return (
     <div className='App' onClick={()=>console.log('App')}>
+      
       <div className='video'> Videos </div>
+      <Clock></Clock>
       <div>
         <button onClick={()=>{
           setVideos(
