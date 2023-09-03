@@ -2,6 +2,7 @@
     width: 15em;
     margin: 0.5em 0 0.5em 0.5em;
     float: left;
+    position: relative;
 }
 .pic img{
     width: 100%;
@@ -20,4 +21,12 @@
 }
 .views span{
     padding: 0 0.5em 0 0;
+}
+.close{
+    position: absolute;
+    right: 0;
+}
+.edit{
+    position: absolute;
+    right: 4em;
 }

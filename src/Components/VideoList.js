@@ -2,7 +2,7 @@ import React from 'react';
 import Video from './Video';
 import PlayButton from './PlayButton';
 
-function VideoList({videos}) {
+function VideoList({videos, deleteVideo, editVideo}) {
   return (
     <div>
       {
@@ -13,7 +13,10 @@ function VideoList({videos}) {
         channel={video.channel} 
         views={video.views} 
         time={video.time} 
-        verified={video.verified}>
+        verified={video.verified}
+        deleteVideo={deleteVideo}
+        editVideo={editVideo}
+        >
 
         <PlayButton 
           onPlay={()=>console.log('playing.. ',video.title)} 
