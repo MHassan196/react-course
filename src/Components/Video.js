@@ -1,12 +1,12 @@
 import React from 'react'
 import './Video.css'
 
-function Video({title,id, channel="CodeWithMe", views, time, verified, children, deleteVideo,editVideo}) {
+function Video({title,id, channel="CodeWithMe", views, time, verified, children, dispatch,editVideo}) {
   return (
     <>
     <div className='container'>
       <div className="pic">
-        <button className='close' onClick={()=>deleteVideo(id)}>X</button>
+        <button className='close' onClick={()=>dispatch({type:'DELETE', payload:id})}>X</button>
         <button className='edit' onClick={()=>editVideo(id)}>Edit</button>
       <img src={`https://picsum.photos/id/${id}/160/90`} alt="" />
       </div>

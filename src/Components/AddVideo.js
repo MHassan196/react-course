@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './AddVideo.css'
 
-function AddVideo({addVideos,updateVideo, editableVideo}) {
+function AddVideo({dispatch, editableVideo}) {
 
     const initialState = {
         channel: "CodeWithMe",
@@ -17,10 +17,10 @@ function AddVideo({addVideos,updateVideo, editableVideo}) {
         e.preventDefault();
         // console.log(video);
         if(editableVideo){
-            updateVideo(video)
+            dispatch({type:'UPDATE', payload:video})
         }
         else{
-            addVideos(video)
+            dispatch({type:'ADD', payload:video})
         }
         
         setVideo(initialState)
