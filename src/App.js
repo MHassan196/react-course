@@ -6,7 +6,7 @@ import VideoList from './Components/VideoList';
 import ThemeContext from './context/ThemeContext';
 import VideosContext from './context/VideosContext';
 import DispatchVideoContext from './context/DispatchVideoContext';
-
+import Counter from './Components/Counter';
 
 function App() {
 
@@ -49,7 +49,7 @@ function App() {
         <DispatchVideoContext.Provider value={dispatch}>
           <div className={`App ${mode}`} onClick={() => console.log('App')}>
             <button onClick={() => setMode(mode === 'darkMode' ? 'lightMode' : 'darkMode')}>Mode</button>
-            
+            <Counter></Counter>
             <div className='video'> Videos </div>
             <AddVideo editableVideo={editableVideo}></AddVideo>
             <VideoList editVideo={editVideo}></VideoList>
