@@ -4,19 +4,24 @@
     float: left;
     position: relative;
 }
+.container.darkMode{
+    color: white
+  }
+.container.lightMode{
+    color: black
+  
+  }
 .pic img{
     width: 100%;
     border-radius: 10px;
 }
 .title{
-    color: white;
     font-size: 12px;
     font-weight: bold;
     margin: 5px 0;
 }
 .channel, .views{
     font-size: 9px;
-    color: white;
     margin-bottom: 0.5em;
 }
 .views span{

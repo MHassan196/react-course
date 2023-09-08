@@ -11,3 +11,9 @@
   font-size: 18px;
   margin-left: 10px;
 }
+.darkMode{
+  background-color: #292828;
+}
+.lightMode{
+  background-color: #d6d1d1;
+}

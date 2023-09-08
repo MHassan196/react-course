@@ -1,8 +1,11 @@
-import React, {useState} from 'react'
+import React, {useContext, useState} from 'react'
 import './PlayButton.css'
+import ThemeContext from '../context/ThemeContext';
 
 function PlayButton({children, onPlay, onPause}) {
     console.log('Render PlayButton')
+
+    const theme = useContext(ThemeContext)
 
     const [playing, setPlaying] = useState(false);
 
@@ -19,7 +22,7 @@ function PlayButton({children, onPlay, onPause}) {
 
   return (
    
-      <button onClick={handleClick}>{children} : {playing? '⏸️' : '⏯️'}</button>
+      <button className={theme} onClick={handleClick}>{children} : {playing? '⏸️' : '⏯️'}</button>
     
   )
 }
