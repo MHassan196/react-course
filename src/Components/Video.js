@@ -1,3 +1,4 @@
+// import React, { useContext, useEffect } from 'react'
 import React, { useContext } from 'react'
 import './Video.css'
 import ThemeContext from '../context/ThemeContext'
@@ -8,6 +9,19 @@ function Video({title,id, channel="CodeWithMe", views, time, verified, children,
   const theme = useContext(ThemeContext)
   // const dispatch = useContext(DispatchVideoContext)
   const dispatch = useVideoDispatch()
+
+  // useEffect(()=>{
+  //   const idx = setInterval(()=>{
+  //     console.log('video playing', id);
+  //   }, 3000)
+
+  //   return()=>{
+  //     clearInterval(idx)
+  //   }
+
+  // }, [id])
+  
+
   return (
     <>
     <div className={`container ${theme}`}>
